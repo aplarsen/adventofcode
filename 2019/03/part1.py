@@ -32,16 +32,9 @@ for wire in wires:
             # Store the new position in our list of ordered pairs
             wire['pairs'].append( pair )
 
-# Create lists of hashes to make searching faster
-wire1 = list(map(hash, wires[0]['pairs']))
-wire2 = list(map(hash, wires[1]['pairs']))
-
-# Build a list of hashes found in both sets
-hashes = [value for value in wire1 if value in wire2][1:]
-hashes
-
-# Build a list of intersections by finding ones that hash to the hashes we found earlier
-intersections = [value for value in wires[0]['pairs'] if hash(value) in hashes]
+# Build a list of pairs found in both sets
+intersections = set(wires[0]['pairs']).intersection(wires[1]['pairs'])
+intersections.remove( (0,0) )
 intersections
 
 # Compute Manhattan distances
