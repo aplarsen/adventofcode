@@ -1,3 +1,4 @@
+
 # Advent of Code
 
 ## 2019
@@ -68,3 +69,14 @@ print(hex(id(bar)))
 
     0x1cddd554248
     0x1cddd54acc8
+
+### Day 3
+* Yikes
+* No issues reading the file and parsing it into a set of wires and instructions.
+* I went down a wrong road on turning the instructions into a path because I didn't realize right away that all of the grid locations between the current position and the new location needed to be traversed first.  I just jumped to it instead of walking to it.
+* Since the translation from one position to another could move in either axis, I decided to treat the step as a vector and apply some matrix math with ordered pairs.  This really simplified thinking about storing the locations in a list so that list could be processed later.
+* I saw Parker Higgins [@xor](https://twitter.com/xor) talking about how searching for lists within lists seemed to be impossibly slow, so I decided to try building my list out of tuples instead of lists.  This worked fine on the test data but failed miserably on the real data.  I decided not to wait until it finished.  Parker also mentioned that searching for hashes would be faster than searching for lists, so I gave that a shot.  Of course the test data was still fast, but I also saw a marked improvement in the real data.  That is, it finished.
+*  I probably could have done something with itertools to save the pairs to a new list at the same time as finding a matching hash, but I'm trying to avoid using itertools because it feels so un-Pythonic.  Going back through each list *once* to find pairs that matched a found hash was pretty quick.
+* After finding the list of intersection points, computing the Manhattan distances was trivial with a simple `map()`, and then finding the minimum Manhattan was even easier with `min()`.
+* Part 2 got me stuck for a little bit because I had a fencepost error while iterating through the lists of pairs to find the first instance of an intersection.  I walked off the end of the list a couple of times before realizing what was happening.  Thank goodness for Jupyter's preservation of state so I didn't have to keep finding the intersections over and over.
+* Once the step counts were found, some simple `map()` and `min()` found the smallest sum.
