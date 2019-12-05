@@ -85,3 +85,9 @@ print(hex(id(bar)))
 ### Day 4
 * Part 1 was pretty straighforward.  Iterate through a string representation of the possible integers (nice use of list comprehension and range).  Make some assumptions about what we see so we can break out of the loop early if a rule is violated.  Build a list of possible passwords, then count it.
 * Part 2 was trickier because I kept getting tied up in fencepost errors at the edges of the string.  I finally let each loop walk off the ends of the array temporarily but pull the bounds in when calculating the difference.  Another thing that helped was remembering that the `or` operator is short-circuited, so checking for bounds before looking at the postion in the string allowed me to prevent errors in looking at characters.
+
+### Day 5
+* The hardest part about today was following the instructions. There are now instructions, opcodes, parameters, modes, and inputs, and it's tough to keep them all straight.  
+* The most challenging instruction was this: ```Parameters that an instruction writes to will never be in immediate mode.```  I had already looped through the parameters and modes to convert the parameters as indicated by the mode before seeing this, so it wasn't obvious to me that making changes to the program's codes  ignore the mode bit and just use the position mode in all cases.
+* Once I made that connection and modified the instructions that set new values, it ran well.
+* In Part 2, the only real adjustment (aside from adding handlers for new opcodes) was changing the jumps from always adding to sometimes needing to jump to a particular position.  The program ran on the first try and produced the right diagnostic code.
