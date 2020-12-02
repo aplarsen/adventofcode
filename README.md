@@ -8,6 +8,12 @@ I'm going to try not to poop out on Day 6 this year.
 * Some easy list searching stuff.
 * I figured that Part 2 would probably involve a deeper search, so I used numpy to find the sum and product instead of performing it manually.  This seems silly when I'm already double- and triple-looping through the list, but I was also interested in some reading on what is out there for list work.  I already know that I do not use numpy enough.
 
+### Day 2
+* Easy regex problem with some looping.
+* I started writing the logic line as `match.group(4).count(match.group(3)` and quickly realized how cumbersome this is.  I had never used the `re.search().groups()` method before, but it was super handy to assign that to a custom list of variables with shorter, meaningful names.
+* Part 2 required looking up the XOR operator, as I'm pretty sure I'd never used it before.
+* The competitive solvers are FAST.  I had solutions entered for both parts by 14 minutes past the hour and received zero points.
+
 ## 2019
 I am using #adventofcode to practice Pandas in Python 3.8.  That means I will likely be using Pandas where the library is overkill, but I need to become more fluent in the Pandas API so I can apply it more easily when it is indicated.
 
