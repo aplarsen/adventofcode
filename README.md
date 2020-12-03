@@ -14,6 +14,11 @@ I'm going to try not to poop out on Day 6 this year.
 * Part 2 required looking up the XOR operator, as I'm pretty sure I'd never used it before.
 * The competitive solvers are FAST.  I had solutions entered for both parts by 14 minutes past the hour and received zero points.
 
+### Day 3
+* Pretty straightforward looping and logic.
+* For part 2, I first tried `np.prod()` to get the product of the tree counts but quickly got an integer overflow.  I was really surprised that numpy would overflow at such a low number by default.  Instead of messing around with different data types, I decided to switch to `math.prod()`.
+* I remembered that GitHub can display Jupyter notebooks natively, so I left today's code in a notebook.  There's really no need to clean these up into .py files when notebooks already display so nicely online.
+
 ## 2019
 I am using #adventofcode to practice Pandas in Python 3.8.  That means I will likely be using Pandas where the library is overkill, but I need to become more fluent in the Pandas API so I can apply it more easily when it is indicated.
 
