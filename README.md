@@ -19,6 +19,18 @@ I'm going to try not to poop out on Day 6 this year.
 * For part 2, I first tried `np.prod()` to get the product of the tree counts but quickly got an integer overflow.  I was really surprised that numpy would overflow at such a low number by default.  Instead of messing around with different data types, I decided to switch to `math.prod()`.
 * I remembered that GitHub can display Jupyter notebooks natively, so I left today's code in a notebook.  There's really no need to clean these up into .py files when notebooks already display so nicely online.
 
+### [Day 4 - Passport Processing](https://adventofcode.com/2020/day/4)
+* Today was a fun couple of challenges.
+* I tried to be as Pythonic as possible using list comprehensions for parsing the strings into passports.
+* It splits the whole file into a list of passport strings by double-newline (`\n\n`).
+* Next, it splits each passport string into a list of strings, then splits *that* string into a key, value dictionary on `:`.
+* A lot happens in that one line, but it takes really great advantage of Python's list comprehension.
+* I can never remember the pattern for checking if all elements of a list belong in another list,but I think today may have made it stick.  I think I realized what `all()` and `any()` do, finally.  That will probably help with Pandas work too.
+* Part 2 required a lot more logic to decide whether a passport passes the test, so I abstracted that out into a function that could be mapped.
+* All of the individual tests were pretty easy to implement.  I have been doing a lot of regex lately and am finally getting comfortable with the various methods.
+* I messed up on the two that required a simple pattern, as I forgot to include a `$` at the end of the pattern.  There were presumably some passports with extra characters in this positions, which would pass the test but be invalid.
+* The short-circuiting of having a function exit and return a value is really handy here.  The assumption (at the end) is that all of the tests were passed.  If any test fails, we can exit at that point and return a False to the list we are summing at the end.
+
 ## 2019
 I am using #adventofcode to practice Pandas in Python 3.8.  That means I will likely be using Pandas where the library is overkill, but I need to become more fluent in the Pandas API so I can apply it more easily when it is indicated.
 
