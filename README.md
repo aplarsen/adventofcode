@@ -31,6 +31,20 @@ I'm going to try not to poop out on Day 6 this year.
 * I messed up on the two that required a simple pattern, as I forgot to include a `$` at the end of the pattern.  There were presumably some passports with extra characters in this positions, which would pass the test but be invalid.
 * The short-circuiting of having a function exit and return a value is really handy here.  The assumption (at the end) is that all of the tests were passed.  If any test fails, we can exit at that point and return a False to the list we are summing at the end.
 
+### [Day 5 - Binary Boarding](https://adventofcode.com/2020/day/5)
+* This seemed a lot harder at first than it ended up being. This is because 128 and 8 are nice round numbers, and the exact number of letters needed to filter the list was provided in each input.
+* Only one row and column were left after looping through all of the instructions.
+* In Part 1, I first solved it by holding a max seatid and increasing it with each check.
+* When starting Part 2, I realized that building a list of seatids would be slicker.  This allowed me to compute a max and a filtered list starting from the same list.
+
+### [Day 6 - Custom Customs](https://adventofcode.com/2020/day/6)
+* I tried really hard not to abstract this out into a function, but it just didn't seem possible.
+* Because the question list was unique within a group, I did not see a way to do this in a single line without some old-school looping.
+* I found a place to use `set()`, which is always fun.
+* Part 2 was a little more challenging.  I am not sure if there is a good way to use the boolean list filtering here, so I chose a more human-friendly approach.
+* Start with person 0's endorsed questions and treat these as common.
+* Move through the rest of the people in the group and remove any questions from the list if not seen in the current person.
+
 ## 2019
 I am using #adventofcode to practice Pandas in Python 3.8.  That means I will likely be using Pandas where the library is overkill, but I need to become more fluent in the Pandas API so I can apply it more easily when it is indicated.
 
