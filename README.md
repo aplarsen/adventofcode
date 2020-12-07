@@ -1,25 +1,29 @@
 
 # Advent of Code
 
-## 2020
+## [2020](https://adventofcode.com/2020)
 I'm going to try not to poop out on Day 6 this year.
 
-### Day 1
+### [Day 1: Report Repair](https://adventofcode.com/2020/day/1)
+[Solution](2020/01)
 * Some easy list searching stuff.
 * I figured that Part 2 would probably involve a deeper search, so I used numpy to find the sum and product instead of performing it manually.  This seems silly when I'm already double- and triple-looping through the list, but I was also interested in some reading on what is out there for list work.  I already know that I do not use numpy enough.
 
-### Day 2
+### [Day 2: Password Philosophy](https://adventofcode.com/2020/day/2)
+[Solution](2020/02)
 * Easy regex problem with some looping.
 * I started writing the logic line as `match.group(4).count(match.group(3)` and quickly realized how cumbersome this is.  I had never used the `re.search().groups()` method before, but it was super handy to assign that to a custom list of variables with shorter, meaningful names.
 * Part 2 required looking up the XOR operator, as I'm pretty sure I'd never used it before.
 * The competitive solvers are FAST.  I had solutions entered for both parts by 14 minutes past the hour and received zero points.
 
-### Day 3
+### [Day 3: Toboggan Trajectory](https://adventofcode.com/2020/day/3)
+[Solution](2020/03)
 * Pretty straightforward looping and logic.
 * For part 2, I first tried `np.prod()` to get the product of the tree counts but quickly got an integer overflow.  I was really surprised that numpy would overflow at such a low number by default.  Instead of messing around with different data types, I decided to switch to `math.prod()`.
 * I remembered that GitHub can display Jupyter notebooks natively, so I left today's code in a notebook.  There's really no need to clean these up into .py files when notebooks already display so nicely online.
 
-### [Day 4 - Passport Processing](https://adventofcode.com/2020/day/4)
+### [Day 4 : Passport Processing](https://adventofcode.com/2020/day/4)
+[Solution](2020/04)
 * Today was a fun couple of challenges.
 * I tried to be as Pythonic as possible using list comprehensions for parsing the strings into passports.
 * It splits the whole file into a list of passport strings by double-newline (`\n\n`).
@@ -31,13 +35,15 @@ I'm going to try not to poop out on Day 6 this year.
 * I messed up on the two that required a simple pattern, as I forgot to include a `$` at the end of the pattern.  There were presumably some passports with extra characters in this positions, which would pass the test but be invalid.
 * The short-circuiting of having a function exit and return a value is really handy here.  The assumption (at the end) is that all of the tests were passed.  If any test fails, we can exit at that point and return a False to the list we are summing at the end.
 
-### [Day 5 - Binary Boarding](https://adventofcode.com/2020/day/5)
+### [Day 5 : Binary Boarding](https://adventofcode.com/2020/day/5)
+[Solution](2020/05)
 * This seemed a lot harder at first than it ended up being. This is because 128 and 8 are nice round numbers, and the exact number of letters needed to filter the list was provided in each input.
 * Only one row and column were left after looping through all of the instructions.
 * In Part 1, I first solved it by holding a max seatid and increasing it with each check.
 * When starting Part 2, I realized that building a list of seatids would be slicker.  This allowed me to compute a max and a filtered list starting from the same list.
 
-### [Day 6 - Custom Customs](https://adventofcode.com/2020/day/6)
+### [Day 6 : Custom Customs](https://adventofcode.com/2020/day/6)
+[Solution](2020/06)
 * I tried really hard not to abstract this out into a function, but it just didn't seem possible.
 * Because the question list was unique within a group, I did not see a way to do this in a single line without some old-school looping.
 * I found a place to use `set()`, which is always fun.
