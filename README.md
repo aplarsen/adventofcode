@@ -59,6 +59,12 @@ I'm going to try not to poop out on Day 6 this year.
 * What made these functions run much more quickly was to iterate through the bags twice to figure out all of the parents and children ahead of time.  I'm not sure if this was completely necesssary, but it allowed me to build the dictionary of bags a little more easily and involved less looping in the recursive functions.
 * Got to use `set()` in a couple of fun places to keep from making lists that were longer than they needed to be.
 
+### [Day 8 : Handheld Halting](https://adventofcode.com/2020/day/8)
+[Solution](2020/08)
+* This reminded me of writing a flight computer in last year's puzzles.
+* It was pretty easy to write the computer this time.
+* I messed up on my `if` statements in the command-changer loop and didn't use `elif` in the second condition.  It changed the command and then changed it back to product no effect at first.
+
 ## 2019
 I am using #adventofcode to practice Pandas in Python 3.8.  That means I will likely be using Pandas where the library is overkill, but I need to become more fluent in the Pandas API so I can apply it more easily when it is indicated.
 
