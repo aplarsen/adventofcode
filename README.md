@@ -51,6 +51,14 @@ I'm going to try not to poop out on Day 6 this year.
 * Start with person 0's endorsed questions and treat these as common.
 * Move through the rest of the people in the group and remove any questions from the list if not seen in the current person.
 
+### [Day 7 : Handy Haversacks](https://adventofcode.com/2020/day/7)
+[Solution](2020/07)
+* Recursion.
+* I do recursion so infrequently that it takes me like a day to remember the fundamentals again.
+* I almost pooped out but came back to it after a couple of weeks and actually implemented it fairly quickly.
+* What made these functions run much more quickly was to iterate through the bags twice to figure out all of the parents and children ahead of time.  I'm not sure if this was completely necesssary, but it allowed me to build the dictionary of bags a little more easily and involved less looping in the recursive functions.
+* Got to use `set()` in a couple of fun places to keep from making lists that were longer than they needed to be.
+
 ## 2019
 I am using #adventofcode to practice Pandas in Python 3.8.  That means I will likely be using Pandas where the library is overkill, but I need to become more fluent in the Pandas API so I can apply it more easily when it is indicated.
 
