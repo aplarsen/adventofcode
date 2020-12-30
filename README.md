@@ -65,6 +65,12 @@ I'm going to try not to poop out on Day 6 this year.
 * It was pretty easy to write the computer this time.
 * I messed up on my `if` statements in the command-changer loop and didn't use `elif` in the second condition.  It changed the command and then changed it back to product no effect at first.
 
+### [Day 9 : Encoding Error](https://adventofcode.com/2020/day/9)
+[Solution](2020/09)
+* Some pretty easy number looping.
+* I read an article yesterday that reminded me that I just do not use numpy enough.  I saw this puzzle as a nice opportunity to use Boolean indexing to find elements in an array that do (not) pass a truth test.
+* I'm not sure I had used `itertools.combinations()` before but found it really helpful here to keep the nested looping from getting out of control.
+
 ## 2019
 I am using #adventofcode to practice Pandas in Python 3.8.  That means I will likely be using Pandas where the library is overkill, but I need to become more fluent in the Pandas API so I can apply it more easily when it is indicated.
 
