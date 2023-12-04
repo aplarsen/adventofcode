@@ -9,6 +9,11 @@ Returning after taking a few years off
 * Part 1 was easy with some regex replacement.
 * My immediate solution for part 2 passed on the sample data just fine but failed on the input data.  I tried several approaches and verified several lines manually before deciding that there must be a bug or I wasn't interpreting something correctly.  A quick look in the subreddit revealed that overlapping words are potentially *both* digits and shouldn't be treated as one digit and some leftover letters.  I had even *intentionally* written my solution with the opposite assumption.  After a quick rewrite, my next attempt worked on the first try.  Not a strong start.
 
+### [Day 2: Cube Conundrum](https://adventofcode.com/2023/day/2)
+[Solution](2023/02)
+* Part 1 worked on the first try.  Once I had the regex built out and tested, I decided to use expansion of the match groups to give myself better variables to work with than matches[1] and matches[2].
+* I had to remember that reduce() isn a built-in and must be imported functools.  Once that was in, the solution worked on the first run.
+
 ## [2020](https://adventofcode.com/2020)
 I'm going to try not to poop out on Day 6 this year.
 
