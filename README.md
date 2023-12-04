@@ -1,6 +1,14 @@
 
 # Advent of Code
 
+## [2023](https://adventofcode.com/2023)
+Returning after taking a few years off
+
+### [Day 1: Trebuchet?!](https://adventofcode.com/2023/day/1)
+[Solution](2023/01)
+* Part 1 was easy with some regex replacement.
+* My immediate solution for part 2 passed on the sample data just fine but failed on the input data.  I tried several approaches and verified several lines manually before deciding that there must be a bug or I wasn't interpreting something correctly.  A quick look in the subreddit revealed that overlapping words are potentially *both* digits and shouldn't be treated as one digit and some leftover letters.  I had even *intentionally* written my solution with the opposite assumption.  After a quick rewrite, my next attempt worked on the first try.  Not a strong start.
+
 ## [2020](https://adventofcode.com/2020)
 I'm going to try not to poop out on Day 6 this year.
 
