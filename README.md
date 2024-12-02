@@ -1,6 +1,13 @@
 
 # Advent of Code
 
+## [2024](https://adventofcode.com/2024)
+Can I stick with it more than a week?  We will see!
+
+### [Day 1: Historian Hysteria](https://adventofcode.com/2024/day/1)
+[Solution](2024/01)
+* Some easy looping over the lists to create some sums
+
 ## [2023](https://adventofcode.com/2023)
 Returning after taking a few years off
 
