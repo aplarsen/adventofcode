@@ -8,6 +8,11 @@ Can I stick with it more than a week?  We will see!
 [Solution](2024/01)
 * Some easy looping over the lists to create some sums
 
+### [Day 2: Red-Nosed Reports](https://adventofcode.com/2024/day/2)
+[Solution](2024/02)
+* Loop through the rows and determine yes/no if safe
+* For Part 2, I moved the check to a function since it needed to be used in two contexts
+
 ## [2023](https://adventofcode.com/2023)
 Returning after taking a few years off
 
