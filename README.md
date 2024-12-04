@@ -13,6 +13,12 @@ Can I stick with it more than a week?  We will see!
 * Loop through the rows and determine yes/no if safe
 * For Part 2, I moved the check to a function since it needed to be used in two contexts
 
+### [Day 3: Mull It Over](https://adventofcode.com/2024/day/3)
+[Solution](2024/03)
+* Some simple regex.
+* Part 2 required writing the regex a little differently to consider more patterns, but no big deal
+* I can't remember if I've used reduce before, but it's a part of functools
+
 ## [2023](https://adventofcode.com/2023)
 Returning after taking a few years off
 
