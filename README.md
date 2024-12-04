@@ -19,6 +19,13 @@ Can I stick with it more than a week?  We will see!
 * Part 2 required writing the regex a little differently to consider more patterns, but no big deal
 * I can't remember if I've used reduce before, but it's a part of functools
 
+### [Day 4: Ceres Search](https://adventofcode.com/2024/day/4)
+[Solution](2024/04)
+* This was pretty fun.
+* Instead of repeating some code in 8 different directions, I decided to treat the direction as a vector and apply the move repeatedly.
+* This involved using [`itertools.product`](https://docs.python.org/3/library/itertools.html#itertools.product) to create the list of possible vectors and [`np.array`](https://numpy.org/doc/2.1/reference/generated/numpy.array.html) to create add vectors elementwise.  I always have to think about whether native python lists will do this, and I am always disappointed to remember that it requires [`numpy`](https://numpy.org/doc/2.1/index.html) arrays.
+* Part 2 required removing the horizontal and vertical vectors (those with a 0 for one of the two values).  Since that still created 4 directions per starting position, I didn't have to look for letters in the opposite direction.
+
 ## [2023](https://adventofcode.com/2023)
 Returning after taking a few years off
 
