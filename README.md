@@ -1,6 +1,14 @@
 
 # Advent of Code
 
+## [2025](https://adventofcode.com/2025)
+Trying it with the 8-year-old looking over my shoulder while I narrate my thinking.
+
+### [Day 1: Secret Entrance](https://adventofcode.com/2024/day/1)
+[Solution](2025/01)
+* We nailed both of these on the first try!
+* It was interesting only having to tab in one block of code to solve the second one
+
 ## [2024](https://adventofcode.com/2024)
 Can I stick with it more than a week?  We will see!
 
